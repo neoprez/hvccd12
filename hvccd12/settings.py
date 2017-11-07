@@ -12,11 +12,11 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import dj_database_url
-from decouple import config
+from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.asbpath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -27,8 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*').split(',')
-
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
 
@@ -77,7 +76,7 @@ WSGI_APPLICATION = 'hvccd12.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-		'default': dj_database_url.config(default=config('DATABASE_URL', default='sqlite    :///' + os.path.join(BASE_DIR, 'db.sqlite3')), conn_max_age=500)
+		'default': dj_database_url.config(default=config('DATABASE_URL', default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')), conn_max_age=500)
 }
 
 
@@ -119,6 +118,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', '/staticfiles/')
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '/media/')
+MEDIA_URL = '/uploads/'
 
 # Extra places for collectstatict to find static files
 STATICFILES_DIRS = (
