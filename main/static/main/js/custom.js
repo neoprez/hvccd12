@@ -593,20 +593,16 @@ function _masonryGallery() {
                 _bigImageNo 	= Number(_bigImageNo) - 1; 
                 _container.find('a:eq('+_bigImageNo+')').css({ width: _firstElemWidth*2 + 'px'});
 
-                loadScript(plugin_path + 'isotope/isotope.pkgd.min.js', function() {
+                setTimeout( function() {
+                    _container.isotope({
+                        masonry: {
+                            columnWidth: _firstElemWidth
+                        }
+                    });
 
-                    setTimeout( function() {
-                        _container.isotope({
-                            masonry: {
-                                columnWidth: _firstElemWidth
-                            }
-                        });
+                    _container.isotope('layout');
 
-                        _container.isotope('layout');
-
-                    }, 1000);
-                
-                });
+                }, 1000);
 
             }
 
