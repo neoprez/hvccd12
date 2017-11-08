@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Vision Celestial Distrito 12</title>
+		<meta name="keywords" content="Church" />
+		<meta name="description" content="" />
+		<meta name="Author" content="Rodny Perez [rodnyperez.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+        {% load static %}
+		<!-- CORE CSS -->
+		<link href="{% static 'main/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="{% static 'main/plugins/slider.revolution/css/extralayers.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'main/plugins/slider.revolution/css/settings.css' %}" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="{% static 'main/css/essentials.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'main/css/layout.css' %}" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="{% static 'main/css/header-1.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'main/css/color_scheme/darkblue.css' %}" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+
+	<body class="smoothscroll enable-animation">
+        {% block body %}
+        {% endblock %}
+        
+        {% block before_footer %}{% endblock %}
+        {% include 'footer.html' %}
+        {% block after_footer %}{% endblock %}
+		<!-- JAVASCRIPT FILES -->
+        <script type="text/javascript" src="{% static 'main/plugins/jquery/jquery-2.1.4.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'main/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'main/plugins/smoothscroll.js' %}"></script>
+        <script type="text/javascript" src="{% static 'main/plugins/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'main/plugins/countdown/jquery.countdown.pack.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'main/plugins/isotope/isotope.pkgd.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'main/plugins/custom.fle_upload.js' %}"></script>
+
+		<script type="text/javascript" src="{% static 'main/js/custom.js' %}"></script>
+	
+		<!-- REVOLUTION SLIDER -->
+		<script type="text/javascript" src="{% static 'main/plugins/slider.revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'main/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'main/js/view/slider.js' %}"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script type="text/javascript" src="{% static 'main/js/contact.js' %}"></script>
+	</body>
+</html>

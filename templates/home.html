@@ -1,0 +1,701 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- wrapper -->
+<div id="wrapper">
+    <!-- 
+        AVAILABLE HEADER CLASSES
+
+        Default nav height: 96px
+        .header-md 		= 70px nav height
+        .header-sm 		= 60px nav height
+
+        .noborder 		= remove bottom border (only with transparent use)
+        .transparent	= transparent header
+        .translucent	= translucent header
+        .sticky			= sticky header
+        .static			= static header
+        .dark			= dark header
+        .bottom			= header on bottom
+        
+        shadow-before-1 = shadow 1 header top
+        shadow-after-1 	= shadow 1 header bottom
+        shadow-before-2 = shadow 2 header top
+        shadow-after-2 	= shadow 2 header bottom
+        shadow-before-3 = shadow 3 header top
+        shadow-after-3 	= shadow 3 header bottom
+
+        .clearfix		= required for mobile menu, do not remove!
+
+        Example Usage:  class="clearfix sticky header-sm transparent noborder"
+    -->
+    <div id="header" class="sticky clearfix header-md">
+
+        <!-- SEARCH HEADER -->
+        <div class="search-box over-header">
+            <a id="closeSearch" href="#" class="glyphicon glyphicon-remove"></a>
+
+            <form action="page-search-result-1.html" method="get">
+                <input type="text" class="form-control" placeholder="SEARCH" />
+            </form>
+        </div> 
+        <!-- /SEARCH HEADER -->
+        {% load static %}
+        <!-- TOP NAV -->
+        <header id="topNav">
+            <div class="container">
+
+                <!-- Mobile Menu Button -->
+                <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Logo -->
+                <a class="logo pull-left scrollTo" href="#top">
+                    <img src="{% static 'main/images/hvcclogo.jpg' %}" alt="" />
+                </a>
+
+                <!-- 
+                    Top Nav 
+                    
+                    AVAILABLE CLASSES:
+                    submenu-dark = dark sub menu
+                -->
+                <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                    <nav class="nav-main">
+                        <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                            <li class="active"><!-- HOME -->
+                                <a href="#home">
+                                    HOME
+                                </a>
+                            </li>
+                            <li><!-- WELCOME -->
+                                <a href="#welcome">
+                                    ACERCA DE NOSOTROS
+                                </a>
+                            </li>
+                            <li><!-- NEWS -->
+                                <a href="#news">
+                                    EVENTOS
+                                </a>
+                            </li>
+                            <li><!-- GALLERY -->
+                                <a href="#gallery">
+                                    GALERIA
+                                </a>
+                            </li>
+                            <li><!-- CONTACT -->
+                                <a href="#contact">
+                                    CONTACTO
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+        <!-- /Top Nav -->
+
+    </div>
+
+
+
+    <!-- REVOLUTION SLIDER -->
+    <div id="home" class="slider fullwidthbanner-container roundedcorners">
+        <!--
+            Navigation Styles:
+            
+                data-navigationStyle="" theme default navigation
+                
+                data-navigationStyle="preview1"
+                data-navigationStyle="preview2"
+                data-navigationStyle="preview3"
+                data-navigationStyle="preview4"
+                
+            Bottom Shadows
+                data-shadow="1"
+                data-shadow="2"
+                data-shadow="3"
+                
+            Slider Height (do not use on fullscreen mode)
+                data-height="300"
+                data-height="350"
+                data-height="400"
+                data-height="450"
+                data-height="500"
+                data-height="550"
+                data-height="600"
+                data-height="650"
+                data-height="700"
+                data-height="750"
+                data-height="800"
+        -->
+        <div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+            <ul class="hide">
+
+                <!-- SLIDE  -->
+                <li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Bienvenidos">
+                    <!-- MAIN IMAGE -->
+                    <img src="{% static 'main/images/welcomelow.jpg' %}"  alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                    <div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+                    <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+                        data-x="50"
+                        data-y="50" 
+                        data-speed="500"
+                        data-start="1500"
+                        data-easing="Cubic.easeOut"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+                            Vision Celestial
+                    </div>
+                    <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+                        data-x="50"
+                        data-y="115" 
+                        data-speed="500"
+                        data-start="1500"
+                        data-easing="Cubic.easeOut"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 2; color:rgb(255, 255, 255); font-size:45px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+                            Distrito 12
+                    </div>
+
+                    <div class="tp-caption skewfromrightshort tp-resizeme"
+                        data-x="50"
+                        data-y="250" 
+                        data-speed="500"
+                        data-start="1000"
+                        data-easing="easeInCirc"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 3; font-size:30px; color:#fff; font-style:bold; font-weight:300; text-shadow:none;">
+                            Estamos orgullosos de tu visita.
+                    </div>
+
+                    <div class="tp-caption sfb tp-resizeme"
+                        data-x="50"
+                        data-y="360" 
+                        data-speed="500"
+                        data-start="1500"
+                        data-easing="Power3.easeIn"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 4; max-width: auto;">
+                            <a class="btn btn-primary btn-lg" href="#welcome">Acerca de Nosotros &nbsp; <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </li>
+
+                <!-- SLIDE  -->
+                <li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Domingos de Avivamiento">
+                    <!-- MAIN IMAGE -->
+                    <img src="{% static 'main/images/revival.jpg' %}" alt="cover image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                    <div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
+
+                    <div class="tp-caption font-roboto skewfromleft tp-resizeme"
+                        data-x="center"
+                        data-y="100" 
+                        data-speed="500"
+                        data-start="1500"
+                        data-easing="Cubic.easeOut"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
+                            Domingos de Avivamiento
+                    </div>
+
+                    <div class="tp-caption skewfromrightshort tp-resizeme"
+                        data-x="center"
+                        data-y="230" 
+                        data-speed="500"
+                        data-start="1000"
+                        data-easing="easeInCirc"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 3; font-size:30px; color:#fff; font-weight:800; text-align: center;">
+                            PS 21 Auditorium, 715 E. 225th St. Bronx, NY 10466 <br />
+                            No te pierdas un encuentro con Dios!
+                    </div>
+
+                    <!-- <div class="tp-caption sfb tp-resizeme"
+                        data-x="center"
+                        data-y="350" 
+                        data-speed="500"
+                        data-start="1500"
+                        data-easing="Power3.easeIn"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="1"
+                        data-endelementdelay="0.1"
+                        data-endspeed="500"
+                        style="z-index: 4; max-width: auto;">
+                            <a class="btn btn-default btn-lg" href="#">CONTINUE READING &nbsp; <i class="fa fa-angle-right"></i></a>
+                    </div> -->
+
+                </li>
+
+            </ul>
+
+            <div class="tp-bannertimer"><!-- progress bar --></div>
+        </div>
+    </div>
+    <!-- /REVOLUTION SLIDER -->
+
+
+
+
+
+
+    <!-- Do Not Miss -->
+    <section id="donotmiss">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="box-static box-border-top">
+                        <div class="box-title">
+                            <h4>Do Not Miss</h4>
+                        </div>
+                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus.</p>
+                        <p><small>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis.</small></p>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+                        <div class="front">
+                            <div class="box1" style="background-color:#a0ce4e;">
+                                <div class="box-icon-title">
+                                    <i class="et-profile-male"></i>
+                                    <h2>Bible Study</h2>
+                                </div>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+                            </div>
+                        </div>
+
+                        <div class="back">
+                            <div class="box2" style="background-color:#a0ce4e;">
+                                <h4>Bible Study</h4>
+                                <hr />
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+                                <a href="#" class="btn btn-block btn-translucid">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+                        <div class="front">
+                            <div class="box1" style="background-color:#cb9536;">
+                                <div class="box-icon-title">
+                                    <i class="et-puzzle"></i>
+                                    <h2>Outserch Ministry</h2>
+                                </div>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+                            </div>
+                        </div>
+
+                        <div class="back">
+                            <div class="box2" style="background-color:#cb9536;">
+                                <h4>Outserch Ministry</h4>
+                                <hr />
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+                                <a href="#" class="btn btn-block btn-translucid">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center">
+                        <div class="front">
+                            <div class="box1" style="background-color:#73b9dc;">
+                                <div class="box-icon-title">
+                                    <i class="et-flag"></i>
+                                    <h2>Teens Camp</h2>
+                                </div>
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+                            </div>
+                        </div>
+
+                        <div class="back">
+                            <div class="box2" style="background-color:#73b9dc;">
+                                <h4>Teens Camp</h4>
+                                <hr />
+                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere</p>
+                                <a href="#" class="btn btn-block btn-translucid">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- /Do Not Miss -->
+
+
+
+
+    <!-- Welcome -->
+    <section id="welcome">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-7">
+                    <img class="img-responsive" src="{% static 'main/images/church.jpg' %}" alt="" />
+                </div>
+
+                <div class="col-sm-5">
+                    <h3 class="weight-300">Bienvenido a <span>Vision Celestial</span> Distrito 12</h3>
+                
+                    <p>¡Qué alegría es presentarte a nuestra iglesia! Aqui descubrirá que nuestra pasión es proporcionar un lugar donde personas como usted puedan tener una experiencia que cambie su vida con Dios.</p>
+                    <p>En Vision Celestial Distrito 12, nuestras puertas estan siempre abiertas
+                        a personas de cualquier clase, sin importar en donde se encuentren en su camino espiritual.
+                        Al llegar a nuestra iglesia, lo que la gente suele notar primero sobre nosotros es la naturaleza vivificante de nuestro ministerio. 
+                        Nuestro objetivo es infundir la vida y el amor de Dios en las personas y familias a través de servicios de adoración atractivos y poderosos que ofrecen la verdad bíblica de maneras relevantes y prácticas.</p>
+                    
+                    <hr />
+
+                    <ul class="list-unstyled list-icons">
+                        <li><i class="fa fa-check"></i> ¡Esta es una iglesia solo para ti!</li>
+                        <li><i class="fa fa-check"></i> Una iglesia de fe!</li>
+                        <li><i class="fa fa-check"></i> Una iglesia que adora!</li>
+                        <li><i class="fa fa-check"></i> Una Iglesia de Compromiso</li>
+                        <li><i class="fa fa-check"></i> Una iglesia de caridad!</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Welcome -->
+
+
+    <!-- Parallax -->
+    <section class="parallax parallax-2" style="background-image: url('{% static 'main/images/church_2-min.jpg'%}');">
+        <div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <h3 class="weight-300 size-30">
+                        <strong>Domingos de Avivamiento</strong>
+                        <small class="block text-white size-15">November 19, 2017 11:00 am</small>
+                    </h3>
+                    
+                    <p class="size-19 weight-300">Preparate para el avivamiento.</p>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="countdown countdown-lg margin-top-40" data-from="November 19, 2017 11:00:00"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- /Parallax -->
+
+
+
+
+
+    <!-- News -->
+    <section id="news">
+        <div class="container">
+
+            <div class="row">
+            
+                <!-- RIGHT -->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    <h2>Eventos <span class="size-18"></span></h2>
+
+                    <!-- news item -->
+                    <div class="inews-item">
+                        <a class="inews-thumbnail" href="#">
+                            <img class="img-responsive" src="{% static 'main/images/avivamiento2.jpg' %}" alt="image" />
+                        </a>
+                        
+                        <div class="inews-item-content">
+
+                            <div class="inews-date-wrapper">
+                                <span class="inews-date-day">17</span>
+                                <span class="inews-date-month">November</span>
+                                <span class="inews-date-year">2017</span>
+                            </div>
+
+                            <div class="inews-content-inner">
+
+                                <h3 class="size-20"><a href="#">Domingos de Avivamiento</a></h3>
+                                <p>Nunca como ahora, debemos estar preparados para la venida de nuestro Señor Jesucristo.</p>		
+                                <p>Tú tienes una cita divina éste y todos los domingos en Visión Celestial Distrito Doce a las 11:00AM, Auditorio PS 21, 715 E. 225th & White Plains, Bronx, NY 10466.</p>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <!-- /news item -->
+
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- /News -->
+
+
+
+
+    <!-- Subscribe -->
+    <section class="alternate padding-xxs">
+        <div class="container">
+
+            <div class="row text-center">
+                <div class="col-lg-4 col-sm-8 col-lg-offset-4 col-md-offset-2 col-sm-offset-2">
+
+                    <p class="size-12 text-muted nomargin">Nota: Nosotros nunca venderemos su correo electronico!</p>
+                    <h5 class="letter-spacing-1">MANTENTE AL DIA</h5>
+                    <div class="input-group">
+                        <input id="newsletter_subscribe_email" type="text" class="form-control" placeholder="Escriba su correo electronico...">
+                        <span class="input-group-btn">
+                            <button id="newsletter_subscribe_btn" class="btn btn-primary" type="button">SUSCRIBIR</button>
+                        </span>
+                    </div><!-- /input-group -->
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- /Subscribe -->
+
+
+
+
+
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="container">
+
+            <div class="row">
+            
+                <!-- RIGHT -->
+                <div class="col-lg-8 col-md-8 col-sm-8 col-lg-push-4 col-md-push-4 col-sm-push-4">
+
+                    <div class="masonry-gallery columns-3 clearfix lightbox" data-img-big="2" data-plugin-options='{"delegate": "a", "gallery": {"enabled": true}}'>
+
+                        <a class="image-hover" href="{% static 'main/images/gallery/photo4.jpg' %}">
+                            <img src="{% static 'main/images/gallery/photo4.jpg' %}" alt="...">
+                        </a>
+
+                        <a class="image-hover" href="{% static 'main/images/gallery/photo2.jpg' %}">
+                            <img src="{% static 'main/images/gallery/photo2.jpg' %}" alt="...">
+                        </a>
+
+                        <a class="image-hover" href="{% static 'main/images/gallery/photo5.jpg' %}">
+                            <img src="{% static 'main/images/gallery/photo5.jpg' %}" alt="...">
+                        </a>
+
+                        <a class="image-hover" href="{% static 'main/images/gallery/photo1.jpg' %}">
+                            <img src="{% static 'main/images/gallery/photo1.jpg' %}" alt="...">
+                        </a>
+
+                        <a class="image-hover" href="{% static 'main/images/gallery/photo3.jpg' %}">
+                            <img src="{% static 'main/images/gallery/photo3.jpg' %}" alt="...">
+                        </a>
+
+                        <a class="image-hover" href="{% static 'main/images/gallery/photo6.jpg' %}">
+                            <img src="{% static 'main/images/gallery/photo6.jpg' %}" alt="...">
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- LEFT -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-lg-pull-8 col-md-pull-8 col-sm-pull-8">
+
+                    <h2>Nuestra Galeria</h2>
+                    <p>Nunca como ahora, debemos estar preparados para la venida de nuestro Señor Jesucristo.</p>	
+                    <p>Tú tienes una cita divina éste y todos los domingos en Visión Celestial Distrito Doce a las 11:00AM, Auditorio PS 21, 715 E. 225th & White Plains, Bronx, NY 10466.</p>
+
+                    <a class="btn btn-default btn-block" href="https://www.facebook.com/pg/visioncelestialdistrito12/photos/?ref=page_internal" target="_blank">VER MAS IMAGENES</a>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+    <!-- /Gallery -->
+
+
+
+
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+
+            <header class="text-center margin-bottom-60">
+                <h2>Contactanos</h2>
+                <hr />
+            </header>
+
+
+            <div class="row">
+                <!-- FORM -->
+                <div class="col-md-8 col-sm-8">
+
+                    <h3>Contactanos para informacion o solamente para decir <strong><em>Hola!</em></strong></h3>
+
+                    <!-- Alert Success -->
+                    <div id="alert_success" class="alert alert-success margin-bottom-30">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Thank You!</strong> Your message successfully sent!
+                    </div><!-- /Alert Success -->
+
+
+                    <!-- Alert Failed -->
+                    <div id="alert_failed" class="alert alert-danger margin-bottom-30">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>[SMTP] Error!</strong> Internal server error!
+                    </div><!-- /Alert Failed -->
+
+
+                    <!-- Alert Mandatory -->
+                    <div id="alert_mandatory" class="alert alert-danger margin-bottom-30">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                    </div><!-- /Alert Mandatory -->
+
+
+                    <form action="" method="post">
+                        <fieldset>
+                            <input type="hidden" name="action" value="contact_send" />
+
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        <label for="contact:name">Nombre Completo *</label>
+                                        <input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="contact:email">Correo Electronico *</label>
+                                        <input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="contact:phone">Numero Telefonico</label>
+                                        <input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="contact:subject">Asunto *</label>
+                                        <input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="contact:message">Mensaje *</label>
+                                        <textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> ENVIAR MENSAJE</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- /FORM -->
+
+
+                <!-- INFO -->
+                <div class="col-md-4 col-sm-4">
+
+                    <h2>Visitanos</h2>
+                    <div id="map2" class="height-400 grayscale">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.272462644484!2d-73.86173548489008!3d40.88783783477691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f3237c19c8a9%3A0xfe22bf6c7e275340!2s715+E+225th+St%2C+Bronx%2C+NY+10466!5e0!3m2!1sen!2sus!4v1510030732071" 
+                                    width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <hr />
+
+                    <p>
+                        <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Auditorio PS 21, 715 E. 225th & White Plains, Bronx, NY 10466</span>
+                        <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">718-220-8124</a></span>
+                        <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:heavenlyvisioncc@gmail.com">heavenlyvisioncc@gmail.com</a></span>
+                    </p>
+
+                </div>
+                <!-- /INFO -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- /CONTACT -->
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="inner">
+        <span class="loader"></span>
+    </div>
+</div><!-- /PRELOADER -->
+{% endblock %}
